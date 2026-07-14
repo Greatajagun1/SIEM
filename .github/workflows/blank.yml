@@ -1,10 +1,10 @@
-name: Hello World
+name: SIEM
 on: workflow_dispatch
 jobs:
-  hello:
+  WelcomePage:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello Steps
+      - name: Welcome Steps
         run: |
           echo "Welcome to GHA"
           echo "This is line two"
@@ -12,7 +12,7 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    needs: hello
+    needs: WelcomePage
     steps:
       - name: Build Steps
         run: echo "A demo build"
